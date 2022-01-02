@@ -30,3 +30,22 @@ Topic：通配符，把消息交给符合routing pattern（路由模式） 的�
 Exchange（交换机）只负责转发消息，不具备存储消息的能力，因此如果没有任何队列与 Exchange 绑定，或者没有符合路由规则的队列，那么消息会丢失！
 ```
 原文连接：https://blog.csdn.net/weixin_45438044/article/details/122180108
+
+## RabbitMq-Demo-04-路由模式
+![](images/demo04.png)
+```java
+1、队列与交换机的绑定，不能是任意绑定了，而是要指定一个 RoutingKey（路由key）消息的发送方在向 Exchange 发送消息时，也必须指定消息的 RoutingKey 
+    
+2、Exchange 不再把消息交给每一个绑定的队列，而是根据消息的 Routing Key 进行判断，只有队列的Routingkey 与消息的 Routing key 完全一致，才会接收到消息
+
+P：生产者，向 Exchange 发送消息，发送消息时，会指定一个routing key
+X：Exchange（交换机），接收生产者的消息，然后把消息递交给与 routing key 完全匹配的队列
+C1：消费者，其所在队列指定了需要 routing key 为 orange的消息
+C2：消费者，其所在队列指定了需要 routing key 为 black、green的消息
+```
+原文连接：https://blog.csdn.net/weixin_45438044/article/details/122181713
+
+
+
+
+
