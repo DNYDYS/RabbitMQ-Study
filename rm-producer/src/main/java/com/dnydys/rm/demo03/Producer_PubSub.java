@@ -1,5 +1,6 @@
-package com.dnydys.rm.demo;
+package com.dnydys.rm.demo03;
 
+import com.dnydys.rm.utils.ConnUtils;
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

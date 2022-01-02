@@ -1,4 +1,4 @@
-package com.dnydys.rm.demo;
+package com.dnydys.rm.utils;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
