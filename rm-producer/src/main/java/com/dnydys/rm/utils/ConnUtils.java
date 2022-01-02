@@ -19,7 +19,7 @@ public class ConnUtils {
 
         //2、设置参数
         // ip
-        connectionFactory.setHost("000.000.000.000");
+        connectionFactory.setHost("101.133.226.94");
         //port 默认：5672
         connectionFactory.setPort(5672);
         //虚拟机设置 默认：/
