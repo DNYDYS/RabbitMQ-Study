@@ -46,6 +46,19 @@ C2：消费者，其所在队列指定了需要 routing key 为 black、green的
 原文连接：https://blog.csdn.net/weixin_45438044/article/details/122181713
 
 
+## RabbitMq-Demo-05-主题模式
+![](images/demo05.png)
+```java
+1、Topic 类型与 Direct 相比，都是可以根据 RoutingKey 把消息路由到不同的队列。只不过 Topic 类型Exchange 可以让队列在绑定 Routing key 的时候使用通配符！
+
+2、Routingkey 一般都是有一个或多个单词组成，多个单词之间以”.”分割，例如： item.insert
+
+3、通配符规则：# 匹配一个或多个词，* 匹配不多不少恰好1个词，例如：item.# 能够匹配 item.insert.abc 或者 item.insert，item.* 只能匹配 item.insert
+
+```
+原文连接：https://blog.csdn.net/weixin_45438044/article/details/122190514
+
+
 
 
 
